@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function () {
 
 ```
 // Change summary paragraph text color
@@ -29,12 +29,14 @@ $("#contactForm").validate({
         form.reset();
 
         return false;
+
     }
 
 });
 ```
 
 });
+
 
 
 
