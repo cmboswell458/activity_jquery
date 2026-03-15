@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<!--
+Name: Crystal Michelle Boswell
+Date: March 2026
+File: index.html
+Description: Demonstrates common uses of jQuery including DOM manipulation
+and form validation using the jQuery Validation plugin.
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Common Uses of jQuery</title>
+
+<!-- External CSS -->
+
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- Local jQuery Library -->
+
+<script src="js/jquery-3.7.1.min.js"></script>
+
+<!-- CDN fallback if local file fails -->
+
+<script>
+if (typeof jQuery == "undefined") {
+document.write('<script src="https://code.jquery.com/jquery-3.7.1.min.js"><\/script>');
+}
+</script>
+
+<!-- jQuery Validation Plugin -->
+
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.19.5/jquery.validate.min.js"></script>
+
+</head>
+
+<body>
+
+<h1>Common Uses of jQuery</h1>
+
+<p id="summary">
+jQuery remains one of the most widely used JavaScript libraries on the web. According to W3Techs data from March 2026, jQuery is still used by roughly 70% of all websites and represents more than 88% of the JavaScript library market share. Much of this widespread usage comes from long-running enterprise systems and its deep integration within the WordPress ecosystem. Although many developers building new applications today prefer modern frameworks such as React, Vue.js, or Svelte, jQuery still provides reliable tools for DOM manipulation, event handling, and form validation. The core problems jQuery originally solved—such as cross-browser compatibility—are now handled better by modern browser APIs, which is why it is used less often in brand-new projects. However, jQuery continues to operate in a stable “maintenance mode” for many organizations because migrating legacy systems can be costly and unnecessary. For this assignment, jQuery version 3.7.1 was used instead of the newer 4.0 release candidate because version 3.7.1 is the latest fully stable release and offers the best compatibility with existing plugins, including the jQuery Validation plugin used in this project.
+</p>
+
+<p>
+Learn more about the plugin used for validation:
+<a href="https://jqueryvalidation.org/" target="_blank">jQuery Validation Plugin</a>
+</p>
+
+<h2>Contact Form</h2>
+
+<form id="contactForm">
+
+<label for="name">Name</label> <input type="text" id="name" name="name" required>
+
+<label for="email">Email</label> <input type="email" id="email" name="email" required>
+
+<label for="message">Message</label>
+
+<textarea id="message" name="message" rows="4" required></textarea>
+
+<button type="submit">Submit</button>
+
+</form>
+
+<p id="successMessage" style="display:none; color:green; font-weight:bold;">
+Your message has been successfully submitted!
+</p>
+
+<!-- External JavaScript -->
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
 
