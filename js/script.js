@@ -1,38 +1,41 @@
 $(document).ready(function() {
 
 ```
-// Change summary paragraph text color
+// Change paragraph text color
 $("#summary").css("color", "blue");
 
-// jQuery Validation
-$("#contactForm").validate({
+// Only run validation if the plugin loaded
+if ($.fn.validate) {
 
-    rules: {
-        name: "required",
-        email: {
-            required: true,
-            email: true
+    $("#contactForm").validate({
+
+        rules: {
+            name: "required",
+            email: {
+                required: true,
+                email: true
+            },
+            message: "required"
         },
-        message: "required"
-    },
 
-    messages: {
-        name: "Please enter your name.",
-        email: "Please enter a valid email address.",
-        message: "Please enter a message."
-    },
+        messages: {
+            name: "Please enter your name.",
+            email: "Please enter a valid email address.",
+            message: "Please enter a message."
+        },
 
-    submitHandler: function(form) {
+        submitHandler: function(form) {
 
-        $("#successMessage").fadeIn();
+            $("#successMessage").fadeIn();
 
-        form.reset();
+            form.reset();
 
-        return false;
+            return false;
+        }
 
-    }
+    });
 
-});
+}
 ```
 
 });
