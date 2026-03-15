@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+
 <!--
 Name: Crystal Michelle Boswell
 Date: March 2026
@@ -27,8 +28,8 @@ and form validation using the jQuery Validation plugin.
 <!-- CDN fallback if local file fails -->
 
 <script>
-if (typeof jQuery == "undefined") {
-document.write('<script src="https://code.jquery.com/jquery-3.7.1.min.js"><\/script>');
+if (typeof jQuery === "undefined") {
+    document.write('<script src="https://code.jquery.com/jquery-3.7.1.min.js"><\/script>');
 }
 </script>
 
@@ -71,10 +72,9 @@ Learn more about the plugin used for validation:
 Your message has been successfully submitted!
 </p>
 
-<!-- External JavaScript -->
+<!-- External JavaScript (loads after page content) -->
 
 <script src="js/script.js"></script>
 
 </body>
 </html>
-
