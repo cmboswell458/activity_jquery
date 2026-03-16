@@ -1,4 +1,11 @@
-// Run jQuery after the page loads
+/*
+Name: Crystal Michelle Boswell
+Date: March 2026
+File: script.js
+Description: Uses jQuery to change the summary paragraph color and
+implements the jQuery Validation plugin for the contact form.
+*/
+
 $(function () {
 
 ```
