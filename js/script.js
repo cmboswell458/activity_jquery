@@ -6,7 +6,7 @@ Description: Uses jQuery to change the summary paragraph color and
 implements the jQuery Validation plugin for the contact form.
 */
 
-$(function () {
+$(document).ready(function () {
 
 ```
 // Change summary paragraph color
@@ -35,7 +35,6 @@ if ($.fn && $.fn.validate) {
         submitHandler: function(form) {
 
             $("#successMessage").fadeIn();
-
             form.reset();
 
             return false;
