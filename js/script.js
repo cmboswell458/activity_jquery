@@ -8,10 +8,11 @@ implements the jQuery Validation plugin for the contact form.
 
 $(function () {
 
-
+```
 // Change paragraph color
 $("#summary").css("color", "blue");
 
+// Apply validation rules
 $("#contactForm").validate({
 
     rules:{
@@ -27,19 +28,24 @@ $("#contactForm").validate({
         name:"Please enter your name.",
         email:"Please enter a valid email address.",
         message:"Please enter a message."
-    },
-
-    submitHandler:function(form) {
-
-        alert("Your message has been successfully submitted!");
-
-        form.reset();
-
-        return false;
-
     }
 
 });
 
+// Handle form submission manually
+$("#contactForm").on("submit", function(e){
+
+    e.preventDefault(); // stop page reload
+
+    if($(this).valid()){
+
+        alert("Your message has been successfully submitted!");
+
+        this.reset();
+
+    }
+
+});
+```
 
 });
