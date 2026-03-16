@@ -1,7 +1,7 @@
-window.onload = function () {
+$(function () {
 
 ```
-$("#summary").css("color", "blue");
+$("#summary").css("color", "blue !important");
 ```
 
-};
+});
