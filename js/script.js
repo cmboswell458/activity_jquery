@@ -29,9 +29,9 @@ $("#contactForm").validate({
         message:"Please enter a message."
     },
 
-    submitHandler:function(form){
+    submitHandler:function(form) {
 
-        $("#successMessage").text("Your message has been successfully submitted!");
+        alert("Your message has been successfully submitted!");
 
         form.reset();
 
