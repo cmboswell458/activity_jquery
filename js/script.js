@@ -9,10 +9,10 @@ implements the jQuery Validation plugin for the contact form.
 $(document).ready(function(){
 
 ```
-// Change paragraph text color
+// Change summary paragraph color
 $("#summary").css("color","blue");
 
-// Apply jQuery validation
+// Apply validation
 $("#contactForm").validate({
 
     rules:{
@@ -28,20 +28,15 @@ $("#contactForm").validate({
         name:"Please enter your name.",
         email:"Please enter a valid email address.",
         message:"Please enter a message."
-    }
+    },
 
-});
+    submitHandler:function(form){
 
-// Custom submit handler
-$("#contactForm").on("submit", function(e){
+        alert("Your message has been successfully submitted!");
 
-    e.preventDefault();  // stop page reload
+        form.reset();
 
-    if($(this).valid()){
-
-        $("#successMessage").text("Your message has been successfully submitted!");
-
-        this.reset();
+        return false;
 
     }
 
