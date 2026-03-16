@@ -8,7 +8,7 @@ implements the jQuery Validation plugin for the contact form.
 
 $(function () {
 
-```
+
 // Change paragraph color
 $("#summary").css("color", "blue");
 
@@ -46,6 +46,6 @@ $("#contactForm").on("submit", function(e){
     }
 
 });
-```
+
 
 });
