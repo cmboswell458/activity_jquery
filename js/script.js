@@ -1,3 +1,4 @@
+// Run jQuery after the page loads
 $(function () {
 
 ```
@@ -31,6 +32,7 @@ if ($.fn && $.fn.validate) {
             form.reset();
 
             return false;
+
         }
 
     });
