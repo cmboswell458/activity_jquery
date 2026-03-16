@@ -1,8 +1,5 @@
+alert("script file loaded");
+
 $(function() {
-
-```
-// Change paragraph color
-$("#summary").css("color", "blue");
-```
-
+    $("#summary").css("color","blue");
 });
