@@ -8,37 +8,44 @@ implements the jQuery Validation plugin for the contact form.
 
 window.onload = function () {
 
-    $("#summary").css("color", "blue");
+```
+// Change summary paragraph color
+$("#summary").css("color", "blue");
 
-    if ($.fn && $.fn.validate) {
+// Run validation if plugin exists
+if ($.fn && $.fn.validate) {
 
-        $("#contactForm").validate({
+    $("#contactForm").validate({
 
-            rules: {
-                name: "required",
-                email: {
-                    required: true,
-                    email: true
-                },
-                message: "required"
+        rules: {
+            name: "required",
+            email: {
+                required: true,
+                email: true
             },
+            message: "required"
+        },
 
-            messages: {
-                name: "Please enter your name.",
-                email: "Please enter a valid email address.",
-                message: "Please enter a message."
-            },
+        messages: {
+            name: "Please enter your name.",
+            email: "Please enter a valid email address.",
+            message: "Please enter a message."
+        },
 
-            submitHandler: function(form) {
+        submitHandler: function(form) {
 
-                $("#successMessage").show();
-                form.reset();
-                return false;
+            document.getElementById("successMessage").innerHTML =
+                "Your message has been successfully submitted!";
 
-            }
+            form.reset();
 
-        });
+            return false;
 
-    }
+        }
+
+    });
+
+}
+```
 
 };
