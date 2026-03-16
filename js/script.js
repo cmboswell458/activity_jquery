@@ -31,7 +31,7 @@ window.onload = function () {
 
             submitHandler: function(form) {
 
-                $("#successMessage").fadeIn();
+                $("#successMessage").show();
                 form.reset();
                 return false;
 
