@@ -1,11 +1,11 @@
 $(document).ready(function () {
 
 ```
-// Change the paragraph color
+// Change paragraph text color
 $("#summary").css("color", "blue");
 
-// Run validation only if plugin loaded
-if ($.fn.validate) {
+// Only run validation if plugin exists
+if (typeof $.fn.validate !== "undefined") {
 
     $("#contactForm").validate({
 
@@ -24,7 +24,7 @@ if ($.fn.validate) {
             message: "Please enter a message."
         },
 
-        submitHandler: function (form) {
+        submitHandler: function(form) {
 
             $("#successMessage").fadeIn();
 
