@@ -3,7 +3,6 @@
 <html lang="en">
 
 <head>
-
 <!--
 Name: Crystal Michelle Boswell
 Date: March 2026
@@ -25,7 +24,7 @@ and form validation using the jQuery Validation plugin.
 
 <script src="js/jquery-3.7.1.min.js"></script>
 
-<!-- CDN fallback if local file fails -->
+<!-- CDN fallback if local jQuery fails -->
 
 <script>
 if (typeof jQuery === "undefined") {
@@ -49,7 +48,9 @@ jQuery remains one of the most widely used JavaScript libraries on the web. Acco
 
 <p>
 Learn more about the plugin used for validation:
-<a href="https://jqueryvalidation.org/" target="_blank">jQuery Validation Plugin</a>
+<a href="https://jqueryvalidation.org/" target="_blank">
+jQuery Validation Plugin
+</a>
 </p>
 
 <h2>Contact Form</h2>
@@ -72,47 +73,9 @@ Learn more about the plugin used for validation:
 Your message has been successfully submitted!
 </p>
 
-<script>
+<!-- External JavaScript -->
 
-$(function () {
-
-    // Change summary paragraph color
-    $("#summary").css("color","blue");
-
-    // Run validation if plugin is available
-    if ($.fn && $.fn.validate) {
-
-        $("#contactForm").validate({
-
-            rules: {
-                name: "required",
-                email: {
-                    required: true,
-                    email: true
-                },
-                message: "required"
-            },
-
-            messages: {
-                name: "Please enter your name.",
-                email: "Please enter a valid email address.",
-                message: "Please enter a message."
-            },
-
-            submitHandler: function(form) {
-
-                $("#successMessage").fadeIn();
-                form.reset();
-
-                return false;
-            }
-
-        });
-
-    }
-
-});
-</script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
