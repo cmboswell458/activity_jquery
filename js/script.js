@@ -6,11 +6,11 @@ Description: Uses jQuery to change the summary paragraph color and
 implements the jQuery Validation plugin for the contact form.
 */
 
-$(document).ready(function(){
+$(function () {
 
-```
+
 // Change paragraph color
-$("#summary").css("color","blue");
+$("#summary").css("color", "blue");
 
 $("#contactForm").validate({
 
@@ -40,6 +40,6 @@ $("#contactForm").validate({
     }
 
 });
-```
+
 
 });
