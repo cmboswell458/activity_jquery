@@ -24,4 +24,4 @@ $("#contactForm").on("submit", function(e){
 });
 
 
-});
+}); 
