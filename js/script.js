@@ -5,45 +5,40 @@ File: script.js
 Description: Uses jQuery to change the summary paragraph color and
 implements the jQuery Validation plugin for the contact form.
 */
-alert("script is running");
-$(document).ready(function () {
 
-```
-// Change summary paragraph color
-$("#summary").css("color", "blue");
+window.onload = function () {
 
-// Run validation if plugin exists
-if ($.fn && $.fn.validate) {
+    $("#summary").css("color", "blue");
 
-    $("#contactForm").validate({
+    if ($.fn && $.fn.validate) {
 
-        rules: {
-            name: "required",
-            email: {
-                required: true,
-                email: true
+        $("#contactForm").validate({
+
+            rules: {
+                name: "required",
+                email: {
+                    required: true,
+                    email: true
+                },
+                message: "required"
             },
-            message: "required"
-        },
 
-        messages: {
-            name: "Please enter your name.",
-            email: "Please enter a valid email address.",
-            message: "Please enter a message."
-        },
+            messages: {
+                name: "Please enter your name.",
+                email: "Please enter a valid email address.",
+                message: "Please enter a message."
+            },
 
-        submitHandler: function(form) {
+            submitHandler: function(form) {
 
-            $("#successMessage").fadeIn();
-            form.reset();
+                $("#successMessage").fadeIn();
+                form.reset();
+                return false;
 
-            return false;
+            }
 
-        }
+        });
 
-    });
+    }
 
-}
-```
-
-});
+};
