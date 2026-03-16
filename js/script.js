@@ -6,13 +6,13 @@ Description: Uses jQuery to change the summary paragraph color and
 implements the jQuery Validation plugin for the contact form.
 */
 
-$(document).ready(function () {
+$(document).ready(function(){
 
 ```
-// Change summary paragraph color
-$("#summary").css("color", "blue");
+// Change paragraph text color
+$("#summary").css("color","blue");
 
-// jQuery Validation
+// Apply jQuery validation
 $("#contactForm").validate({
 
     rules:{
@@ -28,15 +28,20 @@ $("#contactForm").validate({
         name:"Please enter your name.",
         email:"Please enter a valid email address.",
         message:"Please enter a message."
-    },
+    }
 
-    submitHandler:function(form){
+});
+
+// Custom submit handler
+$("#contactForm").on("submit", function(e){
+
+    e.preventDefault();  // stop page reload
+
+    if($(this).valid()){
 
         $("#successMessage").text("Your message has been successfully submitted!");
 
-        form.reset();
-
-        return false;
+        this.reset();
 
     }
 
