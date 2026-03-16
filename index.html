@@ -18,16 +18,6 @@ and form validation using the jQuery Validation plugin.
 
 <link rel="stylesheet" href="css/styles.css">
 
-<script src="js/jquery-3.7.1.min.js"></script>
-
-<script>
-if (typeof jQuery === "undefined") {
-    document.write('<script src="https://code.jquery.com/jquery-3.7.1.min.js"><\/script>');
-}
-</script>
-
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.19.5/jquery.validate.min.js"></script>
-
 </head>
 
 <body>
@@ -57,9 +47,15 @@ Learn more about the plugin used for validation:
 
 <button type="submit">Submit</button>
 
-
-
 </form>
+
+<p id="successMessage" style="color:green; font-weight:bold;"></p>
+
+<!-- SCRIPTS LOADED AT BOTTOM -->
+
+<script src="js/jquery-3.7.1.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.19.5/jquery.validate.min.js"></script>
 
 <script src="js/script.js"></script>
 
