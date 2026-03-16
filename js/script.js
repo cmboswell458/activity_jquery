@@ -3,7 +3,7 @@ Name: Crystal Michelle Boswell
 Date: March 2026
 File: script.js
 Description: Uses jQuery to change the summary paragraph color and
-implements the jQuery Validation plugin for the contact form.
+provides form submission feedback.
 */
 
 $(function () {
@@ -12,38 +12,14 @@ $(function () {
 // Change paragraph color
 $("#summary").css("color", "blue");
 
-// Apply validation rules
-$("#contactForm").validate({
-
-    rules:{
-        name:"required",
-        email:{
-            required:true,
-            email:true
-        },
-        message:"required"
-    },
-
-    messages:{
-        name:"Please enter your name.",
-        email:"Please enter a valid email address.",
-        message:"Please enter a message."
-    }
-
-});
-
-// Handle form submission manually
+// Handle form submission
 $("#contactForm").on("submit", function(e){
 
-    e.preventDefault(); // stop page reload
+    e.preventDefault();
 
-    if($(this).valid()){
+    alert("Your message has been successfully submitted!");
 
-        alert("Your message has been successfully submitted!");
-
-        this.reset();
-
-    }
+    this.reset();
 
 });
 
