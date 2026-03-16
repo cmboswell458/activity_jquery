@@ -72,9 +72,47 @@ Learn more about the plugin used for validation:
 Your message has been successfully submitted!
 </p>
 
-<!-- External JavaScript (loads after page content) -->
+<script>
 
-<script src="js/script.js?v=5"></script>
+$(function () {
+
+    // Change summary paragraph color
+    $("#summary").css("color","blue");
+
+    // Run validation if plugin is available
+    if ($.fn && $.fn.validate) {
+
+        $("#contactForm").validate({
+
+            rules: {
+                name: "required",
+                email: {
+                    required: true,
+                    email: true
+                },
+                message: "required"
+            },
+
+            messages: {
+                name: "Please enter your name.",
+                email: "Please enter a valid email address.",
+                message: "Please enter a message."
+            },
+
+            submitHandler: function(form) {
+
+                $("#successMessage").fadeIn();
+                form.reset();
+
+                return false;
+            }
+
+        });
+
+    }
+
+});
+</script>
 
 </body>
 </html>
