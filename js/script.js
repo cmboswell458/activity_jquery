@@ -5,7 +5,7 @@ File: script.js
 Description: Uses jQuery to change the summary paragraph color and
 implements the jQuery Validation plugin for the contact form.
 */
-
+alert("script is running");
 $(document).ready(function () {
 
 ```
