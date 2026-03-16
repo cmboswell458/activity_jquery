@@ -1,41 +1,8 @@
-$(document).ready(function () {
+$(function() {
 
 ```
-// Change paragraph text color
+// Change paragraph color
 $("#summary").css("color", "blue");
-
-// Only run validation if plugin exists
-if (typeof $.fn.validate !== "undefined") {
-
-    $("#contactForm").validate({
-
-        rules: {
-            name: "required",
-            email: {
-                required: true,
-                email: true
-            },
-            message: "required"
-        },
-
-        messages: {
-            name: "Please enter your name.",
-            email: "Please enter a valid email address.",
-            message: "Please enter a message."
-        },
-
-        submitHandler: function(form) {
-
-            $("#successMessage").fadeIn();
-
-            form.reset();
-
-            return false;
-        }
-
-    });
-
-}
 ```
 
 });
